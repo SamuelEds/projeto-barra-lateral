@@ -1,0 +1,183 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	overflow: hidden;
+}
+
+/*CONFIGURAÇÃO DO TOPO*/
+header{
+	position: fixed;
+	background: linear-gradient(30deg, #4F4F4F, #696969);
+	padding: 20px;
+	width: 100%;
+	height: 30px;
+}
+
+/*CONFIGURAÇÃO DE TODA A SIDEBAR*/
+.sidebar, #revelar:checked ~ .sidebar:hover{
+	background: linear-gradient(30deg, #000000, #363636);
+	margin-top: 70px;
+	padding-top: 10px;
+	position: fixed;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	overflow-x: hidden;
+	transition: .3s;
+}
+
+/*CONFIGURAÇÃO DO PERFIL*/
+.sidebar .imagem_perfil{
+	width: 100px;
+	height: 100px;
+	border-radius: 60px;
+	margin-bottom: 10px;
+}
+
+.sidebar h4{
+	color: #ffffff;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+/*CONFIGURAÇÃO DOS ÍCONES E DOS BOTÕES*/
+.sidebar .item_normal, .sidebar .sub{
+	color: #ffffff;
+	display: block;
+	width: 100%;
+	line-height: 38px;
+	text-decoration: none;
+	padding-left: 40px;
+	box-sizing: border-box;
+	transition: .3s;
+	transition-property: background;
+}
+
+.sidebar a:hover{
+	background: #19B3DE;
+}
+
+.sidebar i{
+	padding-right: 10px;
+}
+
+/*CONFIGURAÇÃO DOS SUB-ITEMS DE MENU*/
+.sub_item_categoria, .sub_item_grupo, .sub_item_form{
+	background: #2c2c2c;
+	color: #ffffff;
+	width: 100%;
+	line-height: 38px;
+	text-decoration: none;
+	padding-left: 40px;
+	max-height: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	display: flex;
+	transition: .6s;
+}
+
+/*MOSTRAR OS SUB-MENUS*/
+.mostrar{
+	max-height: 150px;
+	transition: .6s;
+	display: block;
+}
+
+.sidebar .sub:after{
+	content: '\f063';
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 15px;
+	margin-left: 20px;
+}
+
+/*CONFIGURAÇÃO DO ÍCONE DA SETINHA*/
+.sidebar a .fa-arrow-down{
+	margin-left: 12px;
+}
+
+/*CONFIGURAÇÃO DO BOTÃO DA SIDEBAR*/
+label #botao_sidebar{
+	z-index: 1;
+	color: #00BFFF;
+	position: fixed;
+	cursor: pointer;
+	left: 20px;
+	font-size: 30px;
+	margin: 0;
+	transition: .3s;
+}
+
+label #botao_sidebar:hover{
+	color: #19B3D3;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+/*CONFIGURAÇÃO PARA REVELEAR A SIDEBAR*/
+#revelar:checked ~ .sidebar{
+	left: -190px;
+}
+
+#revelar:checked ~ .sidebar a span{
+	display: none;
+}
+
+#revelar:checked ~ .sidebar a{
+	font-size: 20px;
+	margin-left: 170px;
+	width: 80px;
+	line-height: 35px;
+}
+
+/*ICONES DE SETAS*/
+#revelar:checked ~ .sidebar .sub:after{
+	margin-left: -7px;
+	font-size: 13px;
+}
+
+.conteudo{
+	margin-left: 250px;
+	background: url(img/wallpaper.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: .3s;
+}
+
+#revelar:checked ~ .conteudo{
+	margin-left: 60px;
+}
+
+/*CONFIGURAÇÃO PARA QUANDO O MOUSE ESTIVER EM CIMA DA SIDEBAR*/
+#revelar:checked ~ .sidebar .item{
+	margin-left: 0;
+	width: 100%;
+	font-size: 15px;
+}
+
+#revelar:checked ~ .sidebar .item span{
+	display: initial;
+}
+
+#revelar:checked ~ .sidebar:hover .sub:after{
+	content: '\f063';
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 15px;
+	margin-left: 20px;
+	transition: .3s;
+}
+
+/*CONFIGURANDO BARRA DE ROLAGEM DA SIDEBAR*/
+.sidebar::-webkit-scrollbar{
+	border-color: #fff;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+	border-radius: 60px;
+	background: #696969;
+}

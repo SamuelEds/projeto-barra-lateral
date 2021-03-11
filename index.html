@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Barra Lateral</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<input type="checkbox" id="revelar">
+
+	<header>
+		<label for="revelar">
+			<i class="fas fa-bars" id="botao_sidebar"></i>
+		</label>
+	</header>
+
+	<div class="sidebar">
+		<center>
+			<img src="img/instagram.png" alt="Rezex Informática" class="imagem_perfil">
+			<h4>@rezex_info</h4>
+		</center>
+
+		<a href="#" class="item_normal"><i class="fas fa-home"></i><span>Início</span></a>
+
+		<a href="#" class="sub item_categoria"><i class="fas fa-list"></i><span>Categorias</span></a>
+		<a href="#" class="sub_item sub_item_categoria">Sub-Item_Categoria1</a>
+		<a href="#" class="sub_item sub_item_categoria">Sub-Item_Categoria2</a>
+		<a href="#" class="sub_item sub_item_categoria">Sub-Item_Categoria3</a>
+
+		<a href="#" class="sub item_grupo"><i class="fas fa-users"></i><span>Grupos</span></a>
+		<a href="#" class="sub_item sub_item_grupo">Sub-Item_Grupo1</a>
+		<a href="#" class="sub_item sub_item_grupo">Sub-Item_Grupo2</a>
+		<a href="#" class="sub_item sub_item_grupo">Sub-Item_Grupo3</a>
+
+		<a href="#" class="sub item_form"><i class="fas fa-th"></i><span>Formulários</span></a>
+		<a href="#" class="sub_item sub_item_form">Sub-Item_Formulario1</a>
+		<a href="#" class="sub_item sub_item_form">Sub-Item_Formulario2</a>
+		<a href="#" class="sub_item sub_item_form">Sub-Item_Formulario3</a>
+
+		<a href="#" class="item_normal"><i class="fas fa-cogs"></i><span>Configurações</span></a>
+		<a href="#" class="item_normal"><i class="fas fa-info-circle"></i><span>Sobre</span></a>
+		<br><br><br><br><br>
+
+	</div>
+
+	<div class="conteudo"></div>
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
+	<script src="js.js"></script>
+</body>
+</html>
